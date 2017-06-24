@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="container">
+    <div>
     <h1>Crazy Colour Game</h1>
     <article>
       <h2>Instructions</h2>
@@ -16,24 +16,26 @@
       Click on the Start Game button to start playing!
     </p>
     <p>
-      Colour of the background and the word will change every 4 seconds.
+      Colour of the background and the word will change every 2 seconds.
     </p>
     <p>
-      If the colour of the background matches the word, click on the Correct button!
+      Available colour are <span class="yellow">yellow</span>, <span class="blue">blue</span>, <span class="red">red</span>, <span class="green">green</span>, <span class="pink">pink</span>, <span class="brown">brown</span>, <span class="orange">orange</span> and <span class="purple">purple</span>!
+    <p>
+      When the colour of the BACKGROUND matches the WORD, click on the Correct button!
     </p>
-        <button id="startGame">Start Game</button>
-        <button id="correct">Correct!</button>
+        <button class="startGame">Start Game</button>
+        <button class="correct">Correct!</button>
         <div class="wordBox">
-          Word changes here: <p class"wordDisplay"></p>
+          Word changes here: <p class="wordDisplay">colours~</p>
         </div>
   </div>
       </article>
       <div class='scoreBox'>
-        SCORE: <span class= "score"> 0 </span>
+        SCORE: <span class="score"> 0 </span>
       </div>
 
 
     <!-- JS BEFORE CLOSING BODY TAB -->
-    <!-- <script src="eventListener.js" charset="utf-8"></script> -->
+    <script src="eventListener.js" charset="utf-8"></script>
   </body>
 </html>

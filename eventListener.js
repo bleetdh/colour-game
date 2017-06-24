@@ -21,64 +21,122 @@
 //
 // inputField.addEventListener('click', inputClick)
 
-var button = document.querySelector('#startGame')
-var body = document.querySelector('body')
-var correctButton = document.querySelector('correct')
-var wordDisplay = document.query.querySelector('wordDisplay')
-var score = document.querySelector('score')
-var bgColor = ['yellow', 'blue', 'red', 'white']
-var colorWord = ['yellow', 'blue', 'red', 'white']
-var totalScore = 0
+var startButton = document.querySelector('.startGame')
+var body = document.querySelector('html')
+// var overallBg = document.querySelector('html')
+var correctButton = document.querySelector('.correct')
+var wordDisplay = document.querySelector('.wordDisplay')
+var score = document.querySelector('.score')
+var bgColor = ['yellow', 'blue', 'red', 'green', 'pink', 'brown', 'orange', 'purple']
+var colorWord = ['yellow', 'blue', 'red', 'green', 'pink', 'brown', 'orange', 'purple']
+var r = -1
+var g = -1
+var b = -1
 
-button.addEventListener('click', function () {
+startButton.addEventListener('click', startTime)
+
+function startTime () {
   // setTimeout(afterTimeout, 5000)
-  setInterval(startGame, 4000)
-})
-function startGame(){
-  changeColor()
+  body.style.background = 'white'
+  startButton.style.visibility = 'hidden'
+  setInterval(startGame, 2000)
 }
-function changeColor () {
-  body.style.backgroundColor = colorChanger()
+
+function startGame () {
+  colorChanger()
+  // console.log('hello')
 }
+// function changeColor () {
+//   body.style.backgroundColor = colorChanger()
+//   // body.style.backgroundColor = 'red'
+// }
 
 function randomFn (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 function colorChanger () {
-  var r = randomFn(0, 4)
-  if (r === bgColor[0].length - 1) {
-    colorChanger = bgColor[0]
-  } else if (r === bgColor[1].length - 1) {
-    colorChanger = bgColor[2]
-  } else if (r === bgColor[2].length - 1) {
-    colorChanger = bgColor[2]
-  } else if (r === bgColor[3].length - 1) {
-    colorChanger = bgColor[3]
+  r = randomFn(0, 7)
+  console.log(r)
+  if (r === 0) {
+    body.style.backgroundColor = bgColor[0]
+  } else if (r === 1) {
+    body.style.backgroundColor = bgColor[1]
+  } else if (r === 2) {
+    body.style.backgroundColor = bgColor[2]
+  } else if (r === 3) {
+    body.style.backgroundColor = bgColor[3]
+  } else if (r === 4) {
+    body.style.backgroundColor = bgColor[4]
+  } else if (r === 5) {
+    body.style.backgroundColor = bgColor[5]
+  } else if (r === 6) {
+    body.style.backgroundColor = bgColor[6]
+  } else if (r === 7) {
+    body.style.backgroundColor = bgColor[7]
   }
+  // body.style.backgroundColor = bgColor[r]
   wordChanger()
 }
 
 function wordChanger () {
-  var r = randomFn(0, 4)
-  if (r === colorWord[0].length - 1) {
+  g = randomFn(0, 7)
+  console.log(g)
+  if (g === 0) {
     wordDisplay.textContent = colorWord[0]
-  } else if (r === colorWord[1].length - 1) {
+    // wordDisplay.style.color = colorWord[0]
+  } else if (g === 1) {
+    wordDisplay.textContent = colorWord[1]
+    // wordDisplay.style.color = colorWord[1]
+  } else if (g === 2) {
     wordDisplay.textContent = colorWord[2]
-  } else if (r === colorWord[2].length - 1) {
-    wordDisplay.textContent = colorWord[2]
-  } else if (r === colorWord[3].length - 1) {
+    // wordDisplay.style.color = colorWord[2]
+  } else if (g === 3) {
     wordDisplay.textContent = colorWord[3]
+  } else if (g === 4) {
+    wordDisplay.textContent = colorWord[4]
+  } else if (g === 5) {
+    wordDisplay.textContent = colorWord[5]
+  } else if (g === 6) {
+    wordDisplay.textContent = colorWord[6]
+  } else if (g === 7) {
+    wordDisplay.textContent = colorWord[7]
   }
-  correct()
-}
-function correct(wordChanger, colorChanger) {
-  if (wordChanger === colorChanger){
-    scoreCounter()
-  }
+  // wordDisplay.textContent = colorWord[r]
+  wordColorChanger()
 }
 
-function scoreCounter(){
-  totalScore += 1
-  return score.textContent = totalScore
+function wordColorChanger () {
+  b = randomFn(0, 7)
+  console.log(b)
+  if (b === 0) {
+    wordDisplay.style.color = colorWord[0]
+    // wordDisplay.style.color = colorWord[0]
+  } else if (b === 1) {
+    wordDisplay.style.color = colorWord[1]
+    // wordDisplay.style.color = colorWord[1]
+  } else if (b === 2) {
+    wordDisplay.style.color = colorWord[2]
+    // wordDisplay.style.color = colorWord[2]
+  } else if (b === 3) {
+    wordDisplay.style.color = colorWord[3]
+  } else if (b === 4) {
+    wordDisplay.style.color = colorWord[4]
+  } else if (b === 5) {
+    wordDisplay.style.color = colorWord[5]
+  } else if (b === 6) {
+    wordDisplay.style.color = colorWord[6]
+  } else if (b === 7) {
+    wordDisplay.style.color = colorWord[7]
+  }
+  // wordDisplay.textContent = colorWord[r]
+}
+
+correctButton.addEventListener('click', correctNot)
+var totalScore = 0
+function correctNot (wordChanger, colorChanger) {
+  if (r === g) {
+    totalScore += 1
+  }
+  score.textContent = totalScore
 }

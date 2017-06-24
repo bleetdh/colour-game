@@ -1,16 +1,16 @@
-/*html {
-  background: url("http://www.planwallpaper.com/static/images/colorful-triangles-background_yB0qTG6.jpg") no-repeat center center fixed;
+html {
+  background: url(images/1-f.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}*/
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: rgba(255,255,255);
   width: 600px;
-  margin: auto auto;
+  margin: -15px auto 10px auto;
 }
 h2 {
   text-align: center;
@@ -68,7 +68,36 @@ button:hover {
   background-color: rgba(255,255,255,0.6);
   border-radius: 5px;
   margin-top: 2px;
-  font-size: 40px;
+  font-size: 30px;
   padding: 10px 20px 10px 20px;
   text-align: center;
+}
+.wordDisplay {
+  font-size: 40px;
+  margin: 0px auto 0px auto;
+  color: black;
+}
+.yellow {
+  color: yellow;
+}
+.blue {
+  color: blue;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.pink {
+  color: pink;
+}
+.brown {
+  color: brown;
+}
+.orange {
+  color: orange;
+}
+.purple {
+  color: purple;
 }
