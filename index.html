@@ -9,33 +9,42 @@
   </head>
   <body>
     <div>
-    <h1>Crazy Colour Game</h1>
-    <article>
-      <h2>Instructions</h2>
-    <p>
-      Click on the Start Game button to start playing!
-    </p>
-    <p>
-      Colour of the background and the word will change every 2 seconds.
-    </p>
-    <p>
-      Available colour are <span class="yellow">yellow</span>, <span class="blue">blue</span>, <span class="red">red</span>, <span class="green">green</span>, <span class="pink">pink</span>, <span class="brown">brown</span>, <span class="orange">orange</span> and <span class="purple">purple</span>!
-    <p>
-      When the colour of the BACKGROUND matches the WORD, click on the Correct button!
-    </p>
+      <header>
+        <h1>Crazy Colour Game</h1>
+      </header>
+      <article>
+        <h2>Instructions</h2>
+        <p>
+          Click on the Start Game button to start playing!
+        </p>
+        <p>
+          Colour of the background and the word will change every 1 seconds.
+        </p>
+        <p>
+          Available colour are <span class="yellow">yellow</span>, <span class="blue">blue</span>, <span class="red">red</span>, <span class="green">green</span>, <span class="pink">pink</span> and <span class="brown">brown</span>.
+          <!-- <span class="orange">orange</span> and <span class="purple">purple</span>! -->
+        <p>
+          When the colour of the BACKGROUND matches the WORD, click on the Correct button!
+        </p>
+        <p>
+          Get to 3 to start the party!!
+        </p>
         <button class="startGame">Start Game</button>
         <button class="correct">Correct!</button>
         <div class="wordBox">
           Word changes here: <p class="wordDisplay">colours~</p>
         </div>
-  </div>
       </article>
-      <div class='scoreBox'>
-        SCORE: <span class="score"> 0 </span>
-      </div>
+    </div>
+    <div class='scoreBox'>
+      SCORE: <span class="score"> 0 </span>
+    </div>
+    <div class='missBox'>
+      MISS: <span class="miss"> 0 </span>
+    </div>
 
 
-    <!-- JS BEFORE CLOSING BODY TAB -->
+      <!-- JS BEFORE CLOSING BODY TAB -->
     <script src="eventListener.js" charset="utf-8"></script>
   </body>
 </html>

@@ -9,8 +9,6 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: rgba(255,255,255);
-  width: 600px;
-  margin: -15px auto 10px auto;
 }
 h2 {
   text-align: center;
@@ -22,8 +20,10 @@ h1 {
   text-align: center;
   border: 2px solid black;
   background-color: rgba(255, 255, 255, 0.6);
-  padding: 20px 5px 20px 5px;
+  padding: 20px 0px 20px 0px;
   border-radius: 5px;
+  width: 600px;
+  margin: -5px auto 10px auto;
 }
 
 article {
@@ -34,6 +34,8 @@ article {
   margin-top: -20px;
   border-radius: 5px;
   text-align: justify;
+  width: 580px;
+  margin: -8px auto 10px auto;
 }
 button {
   width:200px;
@@ -63,19 +65,33 @@ button:hover {
   padding: 10px 0px;
 }
 .scoreBox {
-  /*float: left;*/
+  float: left;
   border: 2px solid black;
   background-color: rgba(255,255,255,0.6);
   border-radius: 5px;
-  margin-top: 2px;
+  margin-top: -500px;
+  margin-left: 80px;
   font-size: 30px;
   padding: 10px 20px 10px 20px;
   text-align: center;
+  width: 200px;
 }
 .wordDisplay {
   font-size: 40px;
   margin: 0px auto 0px auto;
   color: black;
+}
+.missBox {
+  float: right;
+  border: 2px solid black;
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 5px;
+  font-size: 30px;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  margin-top: -500px;
+  margin-right: 80px;
+  width: 200px;
 }
 .yellow {
   color: yellow;
