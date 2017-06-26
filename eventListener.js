@@ -133,4 +133,11 @@ function gameOver () {
   correctButton.style.visibility = 'hidden'
   alert('PARTY TIME!')
   setInterval(startGame, 2)
+  startButton.style.visibility = 'visible'
+  startButton.textContent = 'RECHALLENGE!'
+  startButton.addEventListener('click', restartGame)
+}
+
+function restartGame () {
+  location.reload()
 }
