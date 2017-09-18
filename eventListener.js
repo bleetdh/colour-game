@@ -4,7 +4,7 @@ var correctButton = document.querySelector('.correct')
 var wordDisplay = document.querySelector('.wordDisplay')
 var score = document.querySelector('.score')
 var miss = document.querySelector('.miss')
-var color = ['yellow', 'blue', 'red', 'green', 'pink', 'brown', 'orange', 'purple']
+var color = ['yellow', 'blue', 'red', 'green', 'pink', 'brown', 'orange', 'violet']
 // var color = ['yellow', 'blue', 'red', 'green', 'pink', 'brown', 'orange', 'purple']
 var r = -1
 var g = -1
@@ -21,12 +21,7 @@ function startTime () {
 
 function startGame () {
   colorChanger()
-  // console.log('hello')
 }
-// function changeColor () {
-//   body.style.backgroundColor = colorChanger()
-//   // body.style.backgroundColor = 'red'
-// }
 
 function randomFn (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min
